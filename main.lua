@@ -1,19 +1,24 @@
 function love.load()
+    math.randomseed(os.time())
+    
     love.window.setMode(1400, 800)
-
     love.window.setTitle("Pong!")
 
     screenWidth = 1400
     screenHeight = 800
 
+    love.graphics.setDefaultFilter("nearest", "nearest")
+
+    scoreFont = love.graphics.newFont(60)
+
     ball = {}
     ball.r = 10 -- rayon
     ball.x = screenWidth / 2
     ball.y = screenHeight / 2
-    ball.original_speed = 250
-    ball.speed = 250
-    ball.dx = ball.speed
-    ball.dy = ball.speed
+    ball.original_speed = 400
+    ball.speed = 400
+    ball.dx = math.random(-350,350)
+    ball.dy = math.random(-350,350)
 
     paddle = {}
     paddle.x = 0
@@ -21,6 +26,8 @@ function love.load()
     paddle.speed = 400
     paddle.width = 20
     paddle.height = 100
+
+    score = 0
     
 end
 
@@ -35,6 +42,8 @@ function love.update(dt)
 
         ball.dx = ball.dx * 1.1
         ball.dy = ball.dy * 1.1
+
+        score = score + 1 
     end
 
     ball.x = ball.x + ball.dx * dt
@@ -63,8 +72,12 @@ function love.update(dt)
         ball.x = screenWidth / 2
         ball.y = screenHeight / 2
 
+        -- looser()
+
         ball.dx = ball.original_speed
         ball.dy = ball.original_speed
+
+        score = 0
     end
 
     -- if ball.x and ball.y + ball.r = paddle.x and paddle.y then
@@ -105,4 +118,14 @@ end
 function love.draw()
     love.graphics.rectangle("fill", paddle.x, paddle.y, paddle.width, paddle.height)
     love.graphics.circle("fill", ball.x, ball.y, ball.r)
+
+    local scoreText = score
+    love.graphics.setFont(scoreFont)
+    love.graphics.setColor(1, 1, 1)
+    love.graphics.print(score, screenWidth / 2)
+
+    -- function looser()
+    --     love.graphics.print("Looser!", screenWidth / 2, screenHeight / 2)
+    -- end
+
 end
