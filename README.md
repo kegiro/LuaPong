@@ -1,6 +1,6 @@
 # LuaPong
 LuaPong is a basic recreation of the game Pong. Coded in Lua using Löve2D.
-It helps me learning Lua and Löve2D and it is __NOT__ an actual project. I'm currently thinking about making a fangame of FNAF using Undertale's style.
+It helps me learning Lua and Löve2D but it is __NOT__ an actual project. I'm currently thinking about making a fangame of FNAF using Undertale's style.
 
 # Target Features
 - [x] Basic collisions.
