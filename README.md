@@ -9,7 +9,9 @@ LuaPong is a basic recreation of the game Pong. Coded in Lua using Löve2D.
 - [x] Scores.
     *Showing in real time the score.*
 - [ ] Best Score.
-    *Saving the best score*
+    *Saving the best score.*
+- [ ] Looser Screen
+    *Showing the score and if it is a PB.*
 - [ ] Multi-Local.
     *Able to play against his friend with the same keyboard. (Would use ZQSD and Arrows.)*
 - [ ] Bots.
