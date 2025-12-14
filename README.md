@@ -1,7 +1,8 @@
 # LuaPong
 LuaPong is a basic recreation of the game Pong. Coded in Lua using Löve2D.
+It helps me learning Lua and Löve2D and it is __NOT__ an actual project. I'm currently thinking about making a fangame of FNAF using Undertale's style.
 
-# Features
+# Target Features
 - [x] Basic collisions.
     *Walls and paddle. (Might add a system if the ball hit the corner of the paddle.)*
 - [x] Speed ​​increases based on the number of trades.
@@ -18,5 +19,3 @@ LuaPong is a basic recreation of the game Pong. Coded in Lua using Löve2D.
     *A bot that will predict the position of the ball and play against you. (Probably adding multiple difficulties similar to Geometry Dash.)*
 - [ ] Elo.
     *Calculating Elo using Scores.*
-
-*I'm new to Lua, this project is a way for me to learn and I'm more likely to continue it until it gets crazy.*
